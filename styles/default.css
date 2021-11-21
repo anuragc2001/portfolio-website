@@ -20,6 +20,7 @@
 html, body {
     padding: 0px;
     margin: 0px;
+    scroll-behavior: smooth;
 }
 body *{
     transition: 0.3s;
@@ -361,4 +362,19 @@ h6{font-size: 16px;}
     .right-column{
         justify-content: center;
     }
+}
+
+@media screen and (max-width: 400px){
+	#preview-shadow{
+		max-width: 280px;
+		height: 180px;
+		padding-left: 10px;
+		padding-top: 10px;
+	}
+
+	#preview{
+		width: 280px;
+
+	}
+
 }

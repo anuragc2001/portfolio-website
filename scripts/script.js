@@ -5,7 +5,7 @@ for (let index = 0; index < themeDots.length; index++) {
 
     element.addEventListener("click", function () {
         const mode = this.dataset.mode
-        console.log(mode)
+        // console.log(mode)
         setTheme(mode);
     })
 }
