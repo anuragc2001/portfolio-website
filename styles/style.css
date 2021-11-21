@@ -7,6 +7,7 @@
     --mainText: black;
     --secondaryText: #4b5156;
 
+    --themeDotBorder: #24292e;
 
 }
 
@@ -75,7 +76,7 @@ h6{font-size: 16px;}
     border-radius: 5px 5px 0 0;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 3em 30em;
+    /* grid-template-rows: 3em 30em; */
     grid-template-areas: 
         'nav-wrapper nav-wrapper'
         'left-column right-column'
@@ -131,9 +132,60 @@ h6{font-size: 16px;}
 
 .left-column{
     grid-area: left-column;
+    padding-top: 50px;
+    padding-bottom: 50px;
     /* border: 1px dashed lightcoral; */
 }
 
+#profile_pic{
+    display: block;
+    margin: 0 auto;
+    height: 200px;
+    width: 200px;
+    object-fit: cover;
+    border: 2px solid var(--borderColor);
+}
+
+.theme-dot{
+    height: 30px;
+    width: 30px;
+    background-color: black;
+    margin: 5px;
+    border-radius: 50%;
+    border: 2px solid var(--themeDotBorder);
+    -webkit-box-shadow: -1px 1px 3px -1px rgba(0,0,0,0.75);
+    -moz-box-shadow: -1px 1px 3px -1px rgba(0,0,0,0.75);
+    box-shadow: -1px 1px 3px -1px rgba(0,0,0,0.75);
+    cursor: pointer;
+}
+
+.theme-dot:hover{
+    border-width: 5px;
+}
+
+#light-mode{
+    background-color: #fff;
+}
+#blue-mode{
+    background-color: #192734;
+}
+#green-mode{
+    background-color: #78866b;
+}
+#purple-mode{
+    background-color: #7e4c74;
+}
+
+#settings-note{
+    font-size: 12px;
+    font-style: italic;
+    text-align: center;
+}
+
+#theme-options-wrapper{
+    display: flex;
+    justify-content: center;
+}
 .right-column{
     grid-area: right-column;
     /* border: 1px dashed lightcoral; */
