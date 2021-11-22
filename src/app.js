@@ -22,7 +22,7 @@ app.post("/submit", (req, res) => {
 
         visitor.saveVisitorDB(req.body.name, req.body.email, req.body.subject, req.body.message, res)
 
-        // mailer.sendEmail(req.body.email)
+        mailer.sendEmail(req.body.email)
 
     } else {
         res.send("Please fill all the fields")
