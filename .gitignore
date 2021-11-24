@@ -1,3 +1,6 @@
 node_modules
 .env
 private.txt
+agenda.txt
+response.html
+style.css

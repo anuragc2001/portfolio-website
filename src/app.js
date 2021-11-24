@@ -18,14 +18,17 @@ app.get("/", (req, res) => {
     res.sendFile("/public/index.html")
 })
 app.post("/submit", (req, res) => {
-    if (req.body.name && req.body.email && req.body.message) {
+    if (req.body.name && req.body.email && req.body.subject && req.body.message) {
 
         visitor.saveVisitorDB(req.body.name, req.body.email, req.body.subject, req.body.message, res)
 
         mailer.sendEmail(req.body.email)
 
     } else {
-        res.send("Please fill all the fields")
+        setTimeout(() => {
+            res.redirect("/#s4")
+        }, 1800)
+
     }
     console.log(JSON.parse(JSON.stringify(req.body)))
 })
