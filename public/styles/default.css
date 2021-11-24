@@ -79,6 +79,26 @@ h6{font-size: 16px;}
     min-height: 10em;
 }
 
+.typing{
+  
+  overflow: hidden;
+  white-space: nowrap; 
+  margin: 0 auto; 
+  animation: 
+    typing 3.5s steps(30, end),
+    blink-caret .5s step-end infinite;
+}
+
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: orange }
+}
+
 .intro-wrapper{
     background-color: var(--secondaryColor);
     border: 1px solid var(--borderColor);
@@ -90,8 +110,8 @@ h6{font-size: 16px;}
     grid-template-columns: 1fr 1fr;
     /* grid-template-rows: 3em 30em; */
     grid-template-areas: 
-        'nav-wrapper nav-wrapper'
-        'left-column right-column'
+    'nav-wrapper nav-wrapper'
+    'left-column right-column'
     ;
 }
 
@@ -105,6 +125,7 @@ h6{font-size: 16px;}
     justify-content: space-between;
     align-items: center;
 }
+
 #navigation a{
     color: var(--mainText);
 }
@@ -114,11 +135,15 @@ h6{font-size: 16px;}
     padding: 10px;
 }
 #navigation li{
-    display: inline-block;
+    /* display: inline-block; */
     margin-left: 5px;
     margin-right: 5px;
 }
 
+.ribbon{
+    display: flex;
+    gap: 2.2em;
+}
 .dots-wrapper{
     display: flex;
     padding: 10px;
@@ -126,7 +151,9 @@ h6{font-size: 16px;}
 
 #dot-1{
     background-color: #fc6058;
+    cursor: pointer;
 }
+
 #dot-2{
     background-color: #fec02f;
 }
