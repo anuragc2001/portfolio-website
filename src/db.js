@@ -22,9 +22,7 @@ const saveVisitorDB = function (name, email, subject, message, res) {
     })
     visitor.save()
         .then(() => {
-            setTimeout(() => {
-                res.redirect('/')
-            }, 2000)
+            res.redirect('/')
         })
         .catch(err => {
             res.send(err)
