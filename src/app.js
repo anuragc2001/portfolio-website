@@ -30,7 +30,7 @@ app.post("/submit", (req, res) => {
         }, 1800)
 
     }
-    console.log(JSON.parse(JSON.stringify(req.body)))
+    // console.log(JSON.parse(JSON.stringify(req.body)))
 })
 
 app.listen(port, () => {
