@@ -24,8 +24,9 @@ app.post("/submit", (req, res) => {
 
         mailer.sendEmail(req.body.email)
 
-        res.redirect("/")
-
+        setTimeout(() => {
+            res.redirect("/")
+        }, 2000)
     } else {
         setTimeout(() => {
             res.redirect("/#s4")
