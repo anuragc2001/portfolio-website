@@ -1,0 +1,5 @@
+.env
+node_modules
+agenda.txt
+private.txt
+public
