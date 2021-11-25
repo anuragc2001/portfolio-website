@@ -1,5 +1,6 @@
-.env
 node_modules
-agenda.txt
+.env
 private.txt
-public
+agenda.txt
+response.html
+style.css
