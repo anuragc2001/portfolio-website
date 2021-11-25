@@ -21,12 +21,6 @@ const saveVisitorDB = function (name, email, subject, message, res) {
         message: message
     })
     visitor.save()
-        .then(() => {
-            res.redirect('/')
-        })
-        .catch(err => {
-            res.send(err)
-        })
 }
 
 module.exports = {
