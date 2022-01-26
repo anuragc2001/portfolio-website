@@ -2,6 +2,7 @@ const express = require('express');
 const bodyParser = require('body-parser')
 const visitor = require("./db")
 const mailer = require("./mailer")
+const path = require('path')
 
 const port = process.env.PORT || 3000
 
@@ -9,13 +10,13 @@ const port = process.env.PORT || 3000
 const app = express();
 
 
-app.use(express.static("public"))
+app.use(express.static(path.join(__dirname, '/../public')))
 app.use(bodyParser.urlencoded({ extended: true }))
 app.use(bodyParser.json())
 
 
 app.get("/", (req, res) => {
-    res.sendFile("/public/index.html")
+    console.log("/public/index");
 })
 app.post("/submit", (req, res) => {
     if (req.body.name && req.body.email && req.body.subject && req.body.message) {

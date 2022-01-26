@@ -32,5 +32,3 @@ const sendEmail = function (email) {
 module.exports = {
     sendEmail: sendEmail
 }
-
-console.log(process.env.yes)
